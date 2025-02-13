@@ -93,6 +93,7 @@ static uint8_t curr_sec_img;
 
 bool dfu_target_mcuboot_identify(const void *const buf)
 {
+	LOG_INF("dfu_target_mcuboot_identify, buf beggining 0x%08x" *((const uint32_t *)buf));
 	/* MCUBoot headers starts with 4 byte magic word */
 	return *((const uint32_t *)buf) == MCUBOOT_HEADER_MAGIC;
 }
