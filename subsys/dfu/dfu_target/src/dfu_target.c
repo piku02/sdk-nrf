@@ -48,6 +48,7 @@ static int current_img_num = -1;
 
 enum dfu_target_image_type dfu_target_img_type(const void *const buf, size_t len)
 {
+	LOG_INF("dfu_target_img_type, len = %d", len);
 	if (len < MIN_SIZE_IDENTIFY_BUF) {
 		return DFU_TARGET_IMAGE_TYPE_NONE;
 	}
